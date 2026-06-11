@@ -1,0 +1,36 @@
+/* 1. Tipografía Global */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #212529; /* Color base oscuro pedido en la pauta */
+}
+
+/* 2. Ajuste exacto de colores según la pauta */
+.text-muted {
+    color: #707070 !important; /* Gris específico para los subtítulos */
+}
+
+.bg-success {
+    background-color: #28a745 !important; /* Verde exacto de Cuppon */
+}
+
+.text-success {
+    color: #28a745 !important; /* Verde exacto para los precios */
+}
+
+/* 3. Pequeños ajustes visuales de las Cards */
+.card-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.card-img-top {
+    height: 200px; /* Mantiene todas las imágenes del mismo tamaño */
+    object-fit: cover; /* Evita que las imágenes se deformen */
+}
+
+/* 4. Ajuste del botón del formulario */
+form .btn {
+    font-size: 0.95rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
