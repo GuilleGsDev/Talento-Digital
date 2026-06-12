@@ -1,0 +1,27 @@
+/* ==========================================
+VARIABLES GLOBALES Y RESET
+   ========================================== */
+:root {
+    --pink: #e83e8c; /* Color exacto pedido en la pauta */
+    --info: #17a2b8; /* Color para los botones de las tarjetas */
+    --white: #ffffff;
+}
+
+body {
+    /* Requerimiento: Fuente Open Sans */
+    font-family: 'Open Sans', sans-serif;
+    color: #212529; /* Color de texto base pedido en la pauta */
+}
+
+/* ==========================================
+UTILIDADES PERSONALIZADAS
+   ========================================== */
+/* Creamos la clase de fondo rosado para el Navbar */
+.bg-pink {
+    background-color: var(--pink) !important;
+}
+
+/* Forzamos el peso de la fuente a Bold (700) en el Navbar si es necesario */
+.navbar-nav .nav-link {
+    font-weight: 700;
+}
