@@ -1,12 +1,253 @@
-/* ==========================================
-VARIABLES GLOBALES Y RESET
-   ========================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================================================
+   VARIABLES DE COLOR
+   ========================================================= */
+:root {
+  --color-dark:        #373A3C;
+  --color-teal:        #17A2B8;
+  --color-border:      #DDDDDD;
+  --color-black:       #000000;
+  --color-near-black:  #0F0F0F;
+  --color-overlay:     #A2CAC129;
+  --color-accent:      #56C0E0;
+  --color-gray:        #818A91;
+  --color-white:       #FFFFFF;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  color: var(--color-black);
+  padding-top: 60px; /* Ajuste suave para el navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.navbar-custom {
+  background-color: var(--color-dark);
+  padding: 1rem 0;
+}
+
+.navbar-custom .nav-link {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+  color: var(--color-teal);
+}
+
+/* =========================================================
+   UTILIDADES GENERALES
+   ========================================================= */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+.section-title-light {
+  color: var(--color-white);
+}
+
+.section-text {
+  font-size: 16px;
+  color: var(--color-black);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 50px;
+  }
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+.hero-section {
+  background-image: linear-gradient(var(--color-overlay), var(--color-overlay)), url('../img/bg-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Usamos la medida exacta de tu panel de diseño en lugar de vh */
+  min-height: 630px; 
+}
+
+.hero-title {
+  font-size: 3.5rem; /* Un poco más grande */
+  font-weight: 800;  /* Máximo grosor disponible en la fuente Raleway */
+  color: var(--color-white);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px; /* Junta un poquito las letras como en el diseño */
+}
+
+.hero-text {
+  font-size: 18px;
+  color: var(--color-white);
+  max-width: 600px;
+  line-height: 1.6; /* Interlineado un poco más amplio y elegante */
+}
+
+@media (min-width: 992px) {
+  .hero-title {
+    font-size: 70px;
+  }
+}
+
+/* Botones del hero */
+.btn-outline-hero {
+  border: 1px solid var(--color-teal); /* Borde celeste delgado (1px) */
+  color: var(--color-white);
+  font-weight: 400; /* Texto regular, más delgado (sin negrita) */
+  padding: 0.6rem 2rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.btn-outline-hero:hover {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+.btn-teal {
+  background-color: var(--color-teal);
+  border: 1px solid var(--color-teal); /* Borde igual de delgado */
+  color: var(--color-white);
+  font-weight: 400; /* Texto regular para que ambos botones hagan juego */
+  padding: 0.6rem 2rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.btn-teal:hover {
+  background-color: #138496;
+  border-color: #138496;
+  color: var(--color-white);
+}
+
+/* =========================================================
+   ACERCA DE MÍ
+   ========================================================= */
+.about-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-near-black);
+  margin-top: 25px;  
+  margin-bottom: 50px !important; 
+}
+
+.about-text {
+  font-size: 16px;
+  color: var(--color-black);
+  max-width: 285px; /* Reducimos 15px para forzar el salto de línea exacto de la maqueta */
+  margin: 0 auto;   /* Mantiene la caja centrada en su columna */
+  line-height: 1.7; 
+  text-align: center; /* Asegura el centrado sin importar la grilla padre */
+}
+
+/* =========================================================
+   MIS TRABAJOS (PORTAFOLIO)
+   ========================================================= */
+.trabajos-section {
+  background-color: var(--color-teal);
+}
+
+.card-custom {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-custom .card-img-top {
+  height: 235px;
+  object-fit: cover;
+}
+
+/* Alineación y espaciado interior exacto (Caja magenta) */
+.card-custom .card-body {
+  padding: 2rem; /* Dale aire a los bordes para que el texto no choque */
+  text-align: left; /* Fuerza la alineación a la izquierda */
+}
+
+.card-title-custom {
+  font-size: 22px; /* Reducido levemente para que "Papas del fin del mundo" quepa en una línea */
+  font-weight: 700;
+  color: var(--color-near-black);
+  margin-bottom: 1rem; /* Espacio exacto entre título y párrafo */
+}
+
+.card-text-custom {
+  font-size: 16px;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin-bottom: 2rem; /* Espacio exacto entre párrafo y botón (aprox 88px de alto total) */
+}
+
+/* El botón "Ver más" exacto a las medidas 127.58 x 51.55 */
+.btn-outline-teal, .ver-mas {
+  color: var(--color-teal);
+  background-color: transparent;
+  border: 1px solid var(--color-teal); /* Borde celeste */
+  padding: 13px 30px; /* Logra el alto y ancho exacto de la caja magenta */
+  border-radius: 4px; /* Bordes levemente redondeados del botón */
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  display: inline-block; /* CLAVE: Obliga al enlace a comportarse como un bloque/botón */
+}
+
+.btn-outline-teal:hover, .ver-mas:hover {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+.label-custom {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.input-custom {
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}
+
+.input-custom::placeholder {
+  color: var(--color-gray);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer-custom {
+  background-color: var(--color-black); /* Cambiado a negro puro */
+  padding: 2rem 0; /* Un poco de aire arriba y abajo para que no se vea apretado */
+}
+
+.footer-text {
+  font-size: 16px;
+  color: var(--color-white);
+  font-weight: 400;
 }
