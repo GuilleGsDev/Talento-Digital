@@ -9,5 +9,5 @@ Repositorio de desafíos y tareas evaluadas del programa **Desarrollo de Aplicac
 | 01 | [Mi Curriculum Vitae en HTML](./01-cv-html/) | HTML5 | ✅ Completado |
 | 02 | [Iguana Page](./02-iguana-page/) | HTML5, CSS3 | ✅ Completado |
 | 03 | [Suricata Page](./03-suricata-page/) | HTML5, CSS3, Bootstrap 5 | ✅ Completado |
-| 04 | [Olivia Ros](./04-olivia-ros/) | HTML5, CSS3, Bootstrap 5 | 🚧 En proceso |
+| 04 | [Olivia Ros](./04-olivia-ros/) | HTML5, CSS3, Bootstrap 5 | ✅ Completado |
 | 05 | [Cuppon Page](./05-cuppon-page/) | HTML5, CSS3, Bootstrap 5 | ✅ Completado |
