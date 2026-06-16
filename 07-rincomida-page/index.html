@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricomida</title>
+
+    <!-- Google Fonts: Cabin y Lobster -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
+        <div class="container">
+            <a class="navbar-brand font-lobster" href="#">Ricomida</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Recetas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <header class="container my-5">
+        <div class="row align-items-center">
+            <!-- Columna Imagen -->
+            <div class="col-12 col-md-6 mb-4 mb-md-0">
+                <img src="assets/img/principal.jpg" alt="Pizza estilo Chicago" class="img-fluid">
+            </div>
+            <!-- Columna Texto -->
+            <div class="col-12 col-md-6">
+                <h1 class="font-cabin fw-bold">PIZZA AL ESTILO CHICAGO CON ESPINACAS Y CHAMPIÑONES</h1>
+                <hr>
+                <h5 class="font-cabin fw-bold">110 MIN / 6 A 8 PORCIONES</h5>
+                <div class="mt-4">
+                    <button id="enviarCorreo" class="btn btn-outline-dark me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Presiona para enviar a tu correo">Enviar por correo</button>
+                    <button class="btn btn-outline-dark">Añadir a favoritos</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= CAROUSEL (Oculto en sm/xs) ================= -->
+    <section class="container mb-5 d-none d-md-block">
+        <div id="recetaCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#recetaCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#recetaCarousel" data-bs-slide-to="1"></button>
+            </div>
+            
+            <!-- Items del Carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-3"><img src="assets/img/slider-1.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="col-3"><img src="assets/img/slider-2.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="col-3"><img src="assets/img/slider-3.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="col-3"><img src="assets/img/slider-4.jpg" class="d-block w-100" alt="..."></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3"><img src="assets/img/slider-5.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="col-3"><img src="assets/img/slider-6.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="col-3"><img src="assets/img/slider-7.jpg" class="d-block w-100" alt="..."></div>
+                        <div class="col-3"><img src="assets/img/slider-8.jpg" class="d-block w-100" alt="..."></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RECETA DETALLE ================= -->
+    <section class="container mb-5">
+        <hr class="mb-5">
+        <div class="row">
+            <!-- Ingredientes -->
+            <div class="col-12 col-md-6 mb-4">
+                <h4 class="font-cabin fw-bold mb-4 titulo-receta"><u>INGREDIENTES</u></h4>
+                <p>Masa<br><br>20 gr de levadura seca instantánea<br>1 cucharadita de azúcar<br>500 ml agua tibia<br>100 ml aceite vegetal<br>4 cucharadas de aceite de oliva<br>65 gr harina de maíz fina<br>2 cucharaditas de sal<br>625 gr harina</p>
+                <p>Salsa<br><br>5 cucharadas de aceite de oliva<br>½ cebolla picada en cubos finos<br>2 cucharaditas de sal<br>3 cucharadas de Orégano Gourmet<br>1 ½ cucharadas de Albahaca Gourmet<br>2 tarro de tomates en cubos al natural<br>2 cucharaditas de azúcar</p>
+            </div>
+            <!-- Preparación -->
+            <div class="col-12 col-md-6">
+                <h4 class="font-cabin fw-bold mb-4 titulo-receta"><u>PREPARACIÓN</u></h4>
+                <p>1. Para la masa, disolver la levadura y el azúcar en agua tibia en un bol grande. Dejar reposar 2 minutos. Agregar el aceite, la harina de maíz, sal y 400gr de harina. Mezclar bien.</p>
+                <p>2. Mientras tanto preparar la salsa: Calentar 4 cucharadas de aceite en una olla a fuego medio. Agregar la cebolla, Orégano Gourmet, Albahaca Gourmet, sal y cocinar hasta que la cebolla esté dorada.</p>
+                <p>3. Relleno: Cocinar las chalotas en el aceite de oliva hasta que estén transparentes. Agregar los champiñones y las espinacas, cocinar hasta que estén cocidos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RECETAS RELACIONADAS ================= -->
+    <section class="container mb-5">
+        <hr class="mb-5">
+        <h2 class="text-center font-cabin fw-bold mb-5">RECETAS RELACIONADAS</h2>
+        <div class="row g-4">
+            <!-- Tarjeta 1 -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+                    <img src="assets/img/recipe-card-1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title font-cabin fw-bold card-title-toggle" style="cursor: pointer;">PANQUEQUES CON MANJAR Y CREMA</h5>
+                        <p class="card-text">Mus enim elementum dignissim class eleifend justo, ut nunc magnis est vulputate nostra, blandit erat luctus.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+                    <img src="assets/img/recipe-card-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title font-cabin fw-bold card-title-toggle" style="cursor: pointer;">TIRAMISÚ</h5>
+                        <p class="card-text">Congue fermentum dignissim rhoncus elementum ac nisi, proin phasellus lacinia sed faucibus mauris, taciti scelerisque nulla ornare consequat.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100">
+                    <img src="assets/img/recipe-card-3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title font-cabin fw-bold card-title-toggle" style="cursor: pointer;">PLATEADA</h5>
+                        <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet ac eleifend risus, urna auctor inceptos mattis dapibus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="bg-danger-custom text-white text-center py-5">
+        <div class="container">
+            <h2 class="font-cabin fw-bold">SUSCRÍBETE EN NUESTRO NEWSLETTER</h2>
+            <p class="font-cabin fs-4 mb-4">y obtén las mejores recetas que tenemos en <span class="font-lobster">Ricomida</span></p>
+            <button class="btn btn-outline-light px-5 font-cabin">Empezar</button>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark-custom text-center py-4">
+        <h2 class="font-lobster text-white m-0">Ricomida</h2>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS Personalizado -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
