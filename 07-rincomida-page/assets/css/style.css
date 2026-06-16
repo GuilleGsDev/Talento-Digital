@@ -1,0 +1,116 @@
+/* =========================================================
+   1. VARIABLES DE COLOR Y TIPOGRAFÍA
+   ========================================================= */
+:root {
+    --dark:   #373A3C;
+    --red:    #DC3545;
+    --light:  #DDDDDD;
+    --black:  #000000;
+    --white:  #FFFFFF;
+    --gray:   #777777;
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+    color: var(--dark);
+    font-size: 16px;
+}
+
+/* Clases utilitarias para tipografías */
+.font-lobster {
+    font-family: 'Lobster', cursive;
+}
+
+.font-cabin {
+    font-family: 'Cabin', sans-serif;
+}
+
+/* =========================================================
+   2. NAVBAR
+   ========================================================= */
+.bg-dark-custom {
+    background-color: var(--dark);
+}
+
+.navbar-brand {
+    font-size: 37px;
+    color: var(--white) !important;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: var(--white) !important;
+    font-weight: 400;
+}
+
+/* =========================================================
+   3. SECCIÓN HERO (Principal)
+   ========================================================= */
+header h1 {
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+header hr {
+    border-top: 2px solid var(--dark);
+    opacity: 1;
+}
+
+/* =========================================================
+   4. RECETA DETALLE (Ingredientes y Preparación)
+   ========================================================= */
+.titulo-receta {
+    font-size: 25px;
+}
+
+/* =========================================================
+   5. TARJETAS (Recetas Relacionadas)
+   ========================================================= */
+.card {
+    border-radius: 0; /* Bordes rectos como en el diseño */
+    border: 1px solid var(--light);
+}
+
+.card-title {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 1.5;
+}
+
+/* =========================================================
+   6. NEWSLETTER
+   ========================================================= */
+.bg-danger-custom {
+    background-color: var(--red);
+    height: 534px; /* Altura exacta del mockup */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-danger-custom h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   7. FOOTER
+   ========================================================= */
+footer {
+    background-color: var(--dark);
+    height: 125px; /* Altura exacta del mockup */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h2 {
+    font-size: 37px;
+    color: var(--white);
+}
