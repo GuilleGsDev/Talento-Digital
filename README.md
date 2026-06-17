@@ -4,10 +4,8 @@ Repositorio de desafíos y tareas evaluadas del programa **Desarrollo de Aplicac
 
 Copia este bloque exacto y reemplaza esa parte en tu archivo:
 
-```markdown
 ## 📂 Estructura del Directorio
 
-``text
 📦 TALENTO-DIGITAL
 ┣ 📂 Unidad-1
 ┃ ┣ 📂 Actividades
