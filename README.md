@@ -7,7 +7,7 @@ Copia este bloque exacto y reemplaza esa parte en tu archivo:
 ```markdown
 ## 📂 Estructura del Directorio
 
-```text
+``text
 📦 TALENTO-DIGITAL
 ┣ 📂 Unidad-1
 ┃ ┣ 📂 Actividades
