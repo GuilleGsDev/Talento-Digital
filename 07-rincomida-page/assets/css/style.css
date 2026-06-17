@@ -1,116 +1,53 @@
 /* =========================================================
-   1. VARIABLES DE COLOR Y TIPOGRAFÍA
+   1. VARIABLES Y RESET BÁSICO
    ========================================================= */
 :root {
-    --dark:   #373A3C;
-    --red:    #DC3545;
-    --light:  #DDDDDD;
-    --black:  #000000;
-    --white:  #FFFFFF;
-    --gray:   #777777;
+    --dark: #373A3C; --red: #DC3545; --light: #DDDDDD;
+    --black: #000000; --white: #FFFFFF;
 }
 
-body {
-    font-family: 'Cabin', sans-serif;
-    color: var(--dark);
-    font-size: 16px;
+body { font-family: 'Cabin', sans-serif; color: var(--dark); }
+.font-lobster { font-family: 'Lobster', cursive; }
+.font-cabin { font-family: 'Cabin', sans-serif; }
+
+hr { border-top: 1px solid var(--black); opacity: 1; margin: 2rem 0; }
+
+/* =========================================================
+   2. NAVBAR Y HERO
+   ========================================================= */
+.bg-dark-custom { background-color: var(--dark); }
+.navbar-brand { font-size: 37px; color: var(--white) !important; }
+.nav-link { font-size: 16px; color: var(--white) !important; }
+
+header h1 { font-size: 35px; letter-spacing: -1px; }
+
+/* =========================================================
+   3. SECCIONES Y TARJETAS
+   ========================================================= */
+.card { border: 1px solid var(--light); transition: transform 0.2s; }
+.card:hover { transform: translateY(-5px); }
+.card-title-toggle { cursor: pointer; }
+
+.bg-danger-custom { 
+    background-color: var(--red); height: 534px; 
+    display: flex; align-items: center; justify-content: center; 
 }
 
-/* Clases utilitarias para tipografías */
-.font-lobster {
-    font-family: 'Lobster', cursive;
-}
-
-.font-cabin {
-    font-family: 'Cabin', sans-serif;
+footer { 
+    background-color: var(--dark); height: 125px; 
+    display: flex; align-items: center; justify-content: center; 
 }
 
 /* =========================================================
-   2. NAVBAR
+   4. COMPONENTES BOOTSTRAP (INDICADORES CIRCULARES)
    ========================================================= */
-.bg-dark-custom {
-    background-color: var(--dark);
+.carousel-indicators [data-bs-target] {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: var(--dark) !important;
+    opacity: 0.5;
+    margin: 0 5px;
 }
 
-.navbar-brand {
-    font-size: 37px;
-    color: var(--white) !important;
-}
-
-.nav-link {
-    font-size: 16px;
-    color: var(--white) !important;
-    font-weight: 400;
-}
-
-/* =========================================================
-   3. SECCIÓN HERO (Principal)
-   ========================================================= */
-header h1 {
-    font-size: 35px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-header hr {
-    border-top: 2px solid var(--dark);
-    opacity: 1;
-}
-
-/* =========================================================
-   4. RECETA DETALLE (Ingredientes y Preparación)
-   ========================================================= */
-.titulo-receta {
-    font-size: 25px;
-}
-
-/* =========================================================
-   5. TARJETAS (Recetas Relacionadas)
-   ========================================================= */
-.card {
-    border-radius: 0; /* Bordes rectos como en el diseño */
-    border: 1px solid var(--light);
-}
-
-.card-title {
-    font-size: 17px;
-    margin-bottom: 15px;
-}
-
-.card-text {
-    font-size: 16px;
-    color: var(--dark);
-    line-height: 1.5;
-}
-
-/* =========================================================
-   6. NEWSLETTER
-   ========================================================= */
-.bg-danger-custom {
-    background-color: var(--red);
-    height: 534px; /* Altura exacta del mockup */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bg-danger-custom h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-/* =========================================================
-   7. FOOTER
-   ========================================================= */
-footer {
-    background-color: var(--dark);
-    height: 125px; /* Altura exacta del mockup */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer h2 {
-    font-size: 37px;
-    color: var(--white);
-}
+.carousel-indicators .active { opacity: 1 !important; }
