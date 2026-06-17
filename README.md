@@ -6,6 +6,7 @@ Copia este bloque exacto y reemplaza esa parte en tu archivo:
 
 ## 📂 Estructura del Directorio
 
+```
 📦 TALENTO-DIGITAL
 ┣ 📂 Unidad-1
 ┃ ┣ 📂 Actividades
@@ -20,6 +21,7 @@ Copia este bloque exacto y reemplaza esa parte en tu archivo:
 ┣ 📜 .gitignore
 ┣ 📜 .prettierrc
 ┗ 📜 README.md
+```
 
 ## 📚 Desafíos y Actividades
 
