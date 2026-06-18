@@ -2,8 +2,6 @@
 
 Repositorio de desafíos y tareas evaluadas del programa **Desarrollo de Aplicaciones Fullstack Python Trainee** — Talento Digital, Gobierno de Chile.
 
-Copia este bloque exacto y reemplaza esa parte en tu archivo:
-
 ## 📂 Estructura del Directorio
 
 ```
