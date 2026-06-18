@@ -34,4 +34,4 @@ Copia este bloque exacto y reemplaza esa parte en tu archivo:
 | 05 | [Cuppon Page](./Unidad-1/Actividades/05-cuppon-page/) | HTML5, CSS3, Bootstrap 5 | ✅ Completado |
 | 06 | [Notas Finales](./Unidad-1/Actividades/06-notas-finales/) | JS, Lógica base | ✅ Completado |
 | 07 | [Ricomida Page](./Unidad-1/Actividades/07-rincomida-page/) | HTML5, CSS3, Bootstrap 5 | ✅ Completado |
-| 🏆 | [Prueba: Viajes Chile](./Unidad-1/Viajes-Chile-page/) | HTML, CSS, JS, Bootstrap 5 | 🚧 En Desarrollo |
+| 🏆 | [Prueba: Viajes Chile](./Unidad-1/Viajes-Chile-page/) | HTML, CSS, JS, Bootstrap 5 | ✅ Completado |
