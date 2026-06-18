@@ -46,3 +46,16 @@ section {
 .card:hover {
     transform: translateY(-10px);
 }
+
+/* -----------------------------------
+   5. FOOTER
+   Efecto hover para los íconos de redes sociales
+----------------------------------- */
+.social-icons a i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: #0dcaf0; 
+    transform: scale(1.2); 
+}
