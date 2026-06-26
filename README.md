@@ -20,5 +20,5 @@ Repositorio de desafíos y tareas evaluadas del programa **Desarrollo de Aplicac
 
 | N° | Desafío | Tecnologías | Estado |
 |----|---------|-------------|--------|
-| 📁 | [Unidad 1 - Fundamentos de Front-End | HTML, CSS, JS, Bootstrap 5] (./Unidad-1/)| ✅ Completado |
+| 📁 | [Unidad 1 - Fundamentos de Front-End](./Unidad-1/) | HTML, CSS, JS, Bootstrap 5 | ✅ Completado |
 | 01 | [Introducción](./Unidad-2/Actividades/01-introduccion/) | HTML5, CSS3 | ✅ Completado |
