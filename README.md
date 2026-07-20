@@ -21,5 +21,5 @@ Repositorio de desafíos y tareas evaluadas del programa **Desarrollo de Aplicac
 | N° | Desafío | Tecnologías | Estado |
 |----|---------|-------------|--------|
 | 📁 | [Unidad 1 - Fundamentos de Front-End](./Unidad-1/) | HTML, CSS, JS, Bootstrap 5 | ✅ Completado |
-| 01 | [Introducción](./Unidad-2/Actividades/01-introduccion/) | PYTHON | ✅ Completado |
-| 02 | [Sentencias](./Unidad-2/Actividades/02-condicionales-e-iteraciones) | PYTHON | ✅ Completado |
+| 📁 | [Unidad 2 - Fundamentos de Programación en Python](./Unidad-2/) | PYTHON | ✅ Completado |
+| 01 | [Creacion-de-clases-y-objetos](./Unidad-3/Actividades/Creacion-de-clases-y-objetos/) | PYTHON | ✅ Completado |
