@@ -24,3 +24,4 @@ Repositorio de desafíos y tareas evaluadas del programa **Desarrollo de Aplicac
 | 📁 | [Unidad 2 - Fundamentos de Programación en Python](./Unidad-2/) | PYTHON | ✅ Completado |
 | 01 | [Creacion de clases y objetos](./Unidad-3/Actividades/01-creacion-de-clases-y-objetos/) | PYTHON | ✅ Completado |
 | 02 | [Metodos y atributos](./Unidad-3/Actividades/02-metodos-y-atributos/) | PYTHON | En Desarrollo |
+Unidad-3/Actividades/01-Creacion-de-clases-y-objetos
