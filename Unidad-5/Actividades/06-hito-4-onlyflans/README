@@ -1,0 +1,22 @@
+Presentación Hito Final - OnlyFlans
+
+1. Descripción general del sitio web:
+OnlyFlans es una plataforma e-commerce orientada a la exhibición y gestión de contacto de una PYME de postres. Como Ingeniero de Ejecución en Informática de la PUCV, estructuré el proyecto priorizando una arquitectura limpia, separando la lógica de las aplicaciones y asegurando el control de acceso a recursos.
+
+2. Características base del sitio web:
+- Sistema de plantillas dinámicas con herencia (Django Templates) y Bootstrap 5.
+- Base de datos relacional con modelos registrados en el panel de administración.
+- Formularios de contacto automatizados mediante ModelForms.
+- Sistema de autenticación nativo para restringir rutas privadas.
+
+3. Características personalizadas añadidas al sitio web:
+- Incorporación del atributo "Precio" (price) al modelo Flan para reflejar un modelo de negocio real.
+- Nueva ruta "/faq" para información complementaria de atención al cliente.
+- Proyección a futuro: Escalar el modelo de Contacto integrando un agente con inteligencia artificial para automatizar la clasificación y respuesta inicial de los correos recibidos. 
+
+4. Problemas o dificultades (desarrollo base):
+- La correcta configuración inicial de la estructura de carpetas (evitar anidación app/onlyflans/onlyflans). 
+- Manejo de archivos estáticos para que el motor renderizara las imágenes correctamente durante el desarrollo local (DEBUG = True).
+
+5. Problemas o dificultades (características personalizadas):
+- Al agregar el nuevo campo de "Precio" a un modelo ya existente con registros previos, fue necesario definir un valor por defecto (default=1500) para que las migraciones de SQLite3 no arrojaran errores de consistencia en la base de datos.
