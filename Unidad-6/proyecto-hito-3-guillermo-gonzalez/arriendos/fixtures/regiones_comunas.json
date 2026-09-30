@@ -1,0 +1,22 @@
+[
+  {
+    "model": "arriendos.region",
+    "pk": 1,
+    "fields": { "nombre": "Región de Tarapacá" }
+  },
+  {
+    "model": "arriendos.region",
+    "pk": 2,
+    "fields": { "nombre": "Región Metropolitana de Santiago" }
+  },
+  {
+    "model": "arriendos.comuna",
+    "pk": 1,
+    "fields": { "nombre": "Iquique", "region": 1 }
+  },
+  {
+    "model": "arriendos.comuna",
+    "pk": 2,
+    "fields": { "nombre": "Santiago Centro", "region": 2 }
+  }
+]
