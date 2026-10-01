@@ -1,0 +1,10 @@
+--- LISTADO DE INMUEBLES POR REGIÓN (SQL) ---
+
+
+Región: Región de Tarapacá
+ - Nombre: Departamento con vista al mar
+ - Descripción: Hermoso departamento ubicado a pasos de la playa Cavancha.
+
+Región: Región Metropolitana de Santiago
+ - Nombre: Casa céntrica familiar
+ - Descripción: Amplia casa con patio interior y excelente conectividad.
