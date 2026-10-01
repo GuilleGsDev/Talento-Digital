@@ -1,20 +1,15 @@
-# Hito 3 - Migraciones y Recuperación de Datos con Django
+# Hito 4 - Creando una aplicación usando datos con Django y el patrón MVC
 
-Este proyecto implementa la configuración de base de datos, carga de datos iniciales (fixtures) y consultas mediante ORM y SQL puro para la plataforma de arriendo de inmuebles.
+Este proyecto implementa la capa de acceso a datos en un aplicativo web utilizando el patrón MVC para la plataforma de arriendo de inmuebles, integrando la autenticación de usuarios y la gestión de sus perfiles personales.
 
-## 1. Migraciones y Población de Base de Datos
-Se utilizó la herramienta de migraciones de Django para estructurar la base de datos y conectar correctamente los modelos `Inmueble`, `TipoInmueble`, `Region` y `Comuna`. 
-Posteriormente, se utilizó el comando `loaddata` para poblar la base de datos a partir de archivos JSON (`fixtures`), cumpliendo con la carga de:
-- Regiones y Comunas.
-- Tipos de Inmuebles.
-- Usuarios de prueba e Inmuebles asociados a las comunas.
+## 1. Vistas de Autenticación y Perfil
+Se crearon las vistas y plantillas necesarias para la interacción de los usuarios (Arrendatarios y Arrendadores) con el sistema:
+- **Registro y Login:** Se implementó una vista de registro utilizando `UserCreationForm` que loguea automáticamente al usuario al finalizar, junto con la vista de inicio de sesión genérica de Django.
+- **Redireccionamiento:** Se configuraron las rutas en `urls.py` y los parámetros `LOGIN_REDIRECT_URL` y `LOGOUT_REDIRECT_URL` en `settings.py` para asegurar un flujo de navegación correcto.
+- **Despliegue de Datos:** Se creó una página personal (`perfil.html`) que despliega la información del usuario autenticado (nombre de usuario, nombre, apellido y correo), todo bajo un template básico (`base.html`) estructurado con un diseño profesional y colores corporativos.
 
-![Evidencia de carga de datos loaddata](Evidencias/Captura%20de%20pantalla%202026-09-28%20111646.png)
-
-## 2. Consultas y Reportes (ORM y SQL)
-Se creó un script de Python (`consultas.py`) configurado para interactuar con el entorno de Django y la base de datos, el cual automatiza la generación de dos reportes en formato texto:
-- **Reporte por Comunas (ORM):** Utiliza el ORM de Django para filtrar y listar los inmuebles disponibles separados por comuna, extrayendo únicamente los campos `nombre` y `descripción`.
-- **Reporte por Regiones (SQL Puro):** Utiliza un cursor de conexión (`connection.cursor()`) para ejecutar una sentencia `JOIN` en SQL puro, cruzando las tablas de Inmuebles, Comunas y Regiones para estructurar los resultados.
-
-![Evidencia ejecución del script](Evidencias/Captura%20de%20pantalla%202026-09-28%20112555.png)
-*(Se adjuntan los archivos `inmuebles_por_comuna.txt` y `inmuebles_por_region.txt` generados por el script en la raíz del proyecto).*
+## 2. Modificación de Datos Personales
+Se agregó la funcionalidad para que los usuarios puedan actualizar su información personal directamente desde su perfil:
+- **Formulario de Actualización:** Se creó el formulario `UserUpdateForm` para permitir la modificación segura de los datos (nombre, apellido y correo electrónico).
+- **Vista de Edición (CRUD):** Se implementó la vista `editar_perfil`, protegida para que solo usuarios logueados puedan acceder, encargada de procesar y guardar los cambios en la base de datos.
+- **Feedback al Usuario:** Se integró el sistema de mensajes de Django para notificar de forma visual cuando los datos personales se actualizan exitosamente.

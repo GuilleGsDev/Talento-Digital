@@ -11,4 +11,14 @@ urlpatterns = [
     path('registro/', views.registro, name='registro'),
     path('perfil/', views.perfil, name='perfil'),
     path('perfil/editar/', views.editar_perfil, name='editar_perfil'),
+    
+    # Requerimiento 3.a: Rutas para ver las viviendas
+    path('inmuebles/', views.listar_inmuebles, name='listar_inmuebles'),
+    
+    # Requerimiento 1.a: Ruta para agregar nuevas viviendas
+    path('inmuebles/nuevo/', views.nuevo_inmueble, name='nuevo_inmueble'),
+    
+    # Requerimiento 2.a: Rutas para actualizar/borrar viviendas
+    path('inmuebles/editar/<int:id>/', views.editar_inmueble, name='editar_inmueble'),
+    path('inmuebles/eliminar/<int:id>/', views.eliminar_inmueble, name='eliminar_inmueble'),
 ]

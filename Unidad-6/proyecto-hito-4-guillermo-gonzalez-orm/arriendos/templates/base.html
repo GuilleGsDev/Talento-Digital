@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arriendos de Inmuebles</title>
+    <style>
+        /* --- Paleta de Colores Vichy --- */
+        :root {
+            --vichy-teal: #05AD98;
+            --vichy-light-gray: #BBBFBF;
+            --vichy-dark-gray: #878787;
+            --vichy-white: #FFFFFF;
+            --text-main: #333333;
+            --bg-body: #f4f7f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--vichy-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--vichy-teal);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--vichy-teal);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--vichy-dark-gray);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--vichy-teal);
+        }
+
+        button, .btn {
+            background-color: var(--vichy-teal);
+            color: var(--vichy-white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        button:hover, .btn:hover {
+            background-color: #048e7c;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(5, 173, 152, 0.2);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--vichy-dark-gray);
+            border: 1px solid var(--vichy-light-gray);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--vichy-light-gray);
+            color: var(--vichy-white);
+            box-shadow: none;
+        }
+
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: var(--vichy-white);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            border: 1px solid rgba(187, 191, 191, 0.3);
+        }
+
+        h1, h2, h3 {
+            color: var(--vichy-teal);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        form p {
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--vichy-dark-gray);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid var(--vichy-light-gray);
+            border-radius: 6px;
+            font-size: 15px;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--vichy-teal);
+            background-color: var(--vichy-white);
+            box-shadow: 0 0 0 3px rgba(5, 173, 152, 0.1);
+        }
+
+        ul:not(.messages) {
+            list-style: none;
+        }
+        
+        ul:not(.messages) li {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(187, 191, 191, 0.3);
+        }
+
+        .messages {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .messages li {
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .messages .success {
+            background-color: rgba(5, 173, 152, 0.1);
+            color: #048e7c;
+            border: 1px solid rgba(5, 173, 152, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}" class="brand">Arriendos Vichy</a>
+            <div class="nav-links">
+                <!-- NUEVO ENLACE A INMUEBLES -->
+                <a href="{% url 'listar_inmuebles' %}">Ver Inmuebles</a>
+                
+                {% if user.is_authenticated %}
+                    <a href="{% url 'perfil' %}">Mi Perfil</a>
+                    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-outline">Cerrar Sesión</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'login' %}">Iniciar Sesión</a>
+                    <a href="{% url 'registro' %}" class="btn" style="color: white;">Registrarse</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 style="color: #e74c3c;">Eliminar Inmueble</h2>
+    
+    <div style="background-color: #fdf5f5; border: 1px solid #fadbd8; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+        <p style="font-size: 16px; margin-bottom: 10px;">¿Estás seguro de que deseas eliminar el inmueble <strong>"{{ inmueble.nombre }}"</strong>?</p>
+        <p style="color: #c0392b; font-weight: 500; font-size: 14px; margin-bottom: 0;">Esta acción es permanente y no se puede deshacer.</p>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        <div style="display: flex; gap: 10px;">
+            <button type="submit" class="btn btn-danger">Sí, eliminar</button>
+            <a href="{% url 'listar_inmuebles' %}" class="btn btn-outline">Cancelar</a>
+        </div>
+    </form>
+{% endblock %}

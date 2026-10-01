@@ -1,0 +1,10 @@
+--- LISTADO DE INMUEBLES POR COMUNA ---
+
+Comuna: Iquique
+ - Nombre: Departamento con vista al mar
+ - Descripción: Hermoso departamento ubicado a pasos de la playa Cavancha.
+
+Comuna: Santiago Centro
+ - Nombre: Casa céntrica familiar
+ - Descripción: Amplia casa con patio interior y excelente conectividad.
+

@@ -1,0 +1,35 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "username": "usuario_prueba",
+      "email": "usuario@correo.com",
+      "is_active": true
+    }
+  },
+  {
+    "model": "arriendos.inmueble",
+    "pk": 1,
+    "fields": {
+      "nombre": "Departamento con vista al mar",
+      "descripcion": "Hermoso departamento ubicado a pasos de la playa Cavancha.",
+      "direccion": "Av. Arturo Prat 123",
+      "precio": 450000,
+      "tipo_inmueble": 1,
+      "comuna": 1
+    }
+  },
+  {
+    "model": "arriendos.inmueble",
+    "pk": 2,
+    "fields": {
+      "nombre": "Casa céntrica familiar",
+      "descripcion": "Amplia casa con patio interior y excelente conectividad.",
+      "direccion": "Alameda 456",
+      "precio": 650000,
+      "tipo_inmueble": 2,
+      "comuna": 2
+    }
+  }
+]

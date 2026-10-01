@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 style="margin-bottom: 0;">Oferta de Inmuebles</h2>
+        {% if user.is_authenticated %}
+            <a href="{% url 'nuevo_inmueble' %}" class="btn">Agregar Inmueble</a>
+        {% endif %}
+    </div>
+
+    {% if inmuebles %}
+        <ul>
+        {% for inmueble in inmuebles %}
+            <li style="padding: 15px; border: 1px solid var(--vichy-light-gray); border-radius: 8px; margin-bottom: 15px; background-color: #fafafa;">
+                <h3 style="margin-bottom: 10px; color: var(--text-main);">{{ inmueble.nombre }}</h3>
+                <p><strong>Descripción:</strong> {{ inmueble.descripcion }}</p>
+                <p><strong>Comuna:</strong> {{ inmueble.comuna }}</p>
+                
+                {% if user.is_authenticated %}
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <a href="{% url 'editar_inmueble' inmueble.id %}" class="btn btn-outline" style="padding: 6px 12px; font-size: 13px;">Editar</a>
+                    <a href="{% url 'eliminar_inmueble' inmueble.id %}" class="btn btn-outline" style="padding: 6px 12px; font-size: 13px; border-color: #e74c3c; color: #e74c3c;">Eliminar</a>
+                </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay inmuebles disponibles en este momento.</p>
+    {% endif %}
+{% endblock %}

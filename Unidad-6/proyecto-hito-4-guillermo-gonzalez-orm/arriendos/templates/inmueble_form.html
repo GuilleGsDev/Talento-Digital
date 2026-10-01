@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ accion }} Inmueble</h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <div style="margin-top: 20px; display: flex; gap: 10px;">
+            <button type="submit" class="btn">Guardar Inmueble</button>
+            <a href="{% url 'listar_inmuebles' %}" class="btn btn-outline">Cancelar</a>
+        </div>
+    </form>
+{% endblock %}
